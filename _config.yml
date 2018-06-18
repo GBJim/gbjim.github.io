@@ -5,22 +5,21 @@
 
 # Site settings
 title:
-  en: Your awesome title
-  fr: Votre titre génial
-email: your-email@domain.com
+  en: CHC Research Log
+  繁中: CHC-研究日誌
+email: ccha97u@gmail.com
 description:
   en: Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-  fr: Écrivez une super description de votre nouveau site ici. Vous pouvez modifier cette ligne dans _config.yml. Elle apparaîtra dans la balise meta description (pour les résultats sur Google) et dans le fil RSS feed.xml.
+  繁中: 歡迎來到這裡
 index:
-  en:
-  fr: accueil.html
+  en: index.html
+  繁中: index_tw.html
 feed:
   en: /feed.xml
-  fr: /flux.xml
-baseurl: "/jekyll-multilingual" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+  繁中: /feed_tw.xml
+url: "" # the base hostname & protocol for your site
+twitter_username: GBJim
+github_username:  GBJim
 
 # Build settings
 markdown: kramdown
