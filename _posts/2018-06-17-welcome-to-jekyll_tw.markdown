@@ -3,7 +3,7 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2018-06-17 15:59:29 +0800
 categories: jekyll update
-ref: welcome
+ref: d-star
 lang: 繁中
 comments: true
 ---
