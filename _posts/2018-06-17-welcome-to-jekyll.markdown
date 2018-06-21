@@ -25,9 +25,18 @@ Here is the visualization of A star
 As you can see, the computation propagates from the starting node to the destination mode. More precisely, the computation propagates from nodes with smaller cost to nodes with bigger cost. This is the result of the min-queue and the DP fashioned cost updating formula: g(s) = f(s') + c(s) where s' is the predecessor with the minimal cost.
 The min queue ensure that the current smaller nodes always get computed earlier then bigger nodes. The DP formula propagates the computation from nodes to nodes.
 
-Now, lets imagine what would happen when the environment is changed.
-##GIF animation of A star, changed
-After the barrier is added,
+
+Here are the two important properties that hold both in A* and D*-Lite:
+Min Queue:
+[Image]
+In the min-queue, the node with minimal cost pops and gets visited earlier. This property ensures the computation on each node goes in an ascending order.
+
+DP Update Formula:
+[Image]
+The computation of a node depends on it's predecessor with the minimal cost. In the other hand, if the cost of the node is the minimum to the successors, it propagates the computation to the successors. This property results the "Upstream" and the "Downstream". Upstream nodes propagates the computation to the downstream nodes.
+
+
+
 
 
 
@@ -41,6 +50,7 @@ rhs(s) = c(s, s') + g(s')
 
 
 
+$$a^2 + b^2 = c^2$$
 
 
 Jekyll also offers powerful support for code snippets:
