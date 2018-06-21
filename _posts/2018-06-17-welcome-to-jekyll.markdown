@@ -48,9 +48,29 @@ rhs(s) = c(s, s') + g(s')
 
 
 
+$$
+f(s) = g(s) + h(s)
+$$
+
+$$
+rhs(s) =
+\begin{cases}
+0 & \text{if s is start point} \\
+min_{s' \in Succ(s)} (c(s, s') + g(s')) & \text{otherwise,}
+\end{cases}
+$$
+
+$$
+g(s) = rhs(s)
+$$
+
+$$
+key(s) = [k_1(s), k_2(s)]\\
+= [\min(g(s), rhs(s)) + h(s),\\
+min(g(s), rhs(s)) ]\\
+$$
 
 
-$$a^2 + b^2 = c^2$$
 
 
 Jekyll also offers powerful support for code snippets:
