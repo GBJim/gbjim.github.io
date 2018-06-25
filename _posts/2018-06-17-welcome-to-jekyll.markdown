@@ -32,10 +32,32 @@ Min Queue:
 In the min-queue, the node with minimal cost pops and gets visited earlier. This property ensures the computation on each node goes in an ascending order.
 
 DP Update Formula:
+$$
+g(s) =
+\begin{cases}
+0 & \text{if s is start point} \\
+min_{s' \in Preds(s)} (c(s, s') + g(s')) & \text{otherwise,}
+\end{cases}
+$$
 [Image]
 The computation of a node depends on it's predecessor with the minimal cost. In the other hand, if the cost of the node is the minimum to the successors, it propagates the computation to the successors. This property results the "Upstream" and the "Downstream". Upstream nodes propagates the computation to the downstream nodes.
 
 
+How do we apply this two ideas in dynamic environments?
+Let's see this example.
+
+In the begining, we just search like in static space.
+
+[Image]
+
+When the chagne happens, we update the changes. The changed nodes propogate this information to the neighboring nodes, if the new cost ??????????? ,causing an chain reation.
+
+
+
+
+
+#Traisition
+In D-Star-Lite, this two 
 
 
 
