@@ -43,14 +43,9 @@ $$
 The computation of a node depends on it's predecessor with the minimal cost. In the other hand, if the cost of the node is the minimum to the successors, it propagates the computation to the successors. This property results the "Upstream" and the "Downstream". Upstream nodes propagates the computation to the downstream nodes.
 
 
-How do we apply this two ideas in dynamic environments?
-Let's see this example.
+But how do we apply this two ideas in dynamic environments? It's simple. When change happens, we propogate the update to it's neighboring nodes. The neighboring nodes then propagate further to their neighboring nodes, resulting a computaional ripple.
+The DP formula decides *how to propagate* the update while the min-queue decides the *order* of the propogation
 
-In the begining, we just search like in static space.
-
-[Image]
-
-When the chagne happens, we update the changes. The changed nodes propogate this information to the neighboring nodes, if the new cost ??????????? ,causing an chain reation.
 
 
 
