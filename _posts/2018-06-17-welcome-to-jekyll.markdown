@@ -14,12 +14,17 @@ https://github.com/GBJim/d-star-lite
 If you are not familiar with A* search, here is [a great article](http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html) to get started. D-Star-Lite and this article is based on A* search.
 
 **Abstract:**
-Searching Algorithms are the cores of nvigation systems and motion planning. You are probably familiar with searching algorithms like Breadth-First Search, Depth-First Search, or the more advanced A* search.
+Searching Algorithms are the cores of navigation systems and motion planning. You are probably familiar with searching algorithms like Breadth-First Search, Depth-First Search, or the more advanced A* search.
 
 
 But these algorithms assume the environment to be static. In reality, environment are constantly changing. To deal with it, we can simply do re-searching whenever the environment changed. But this kind of approach may suffer from inefficiency, even a small change of the world would introduce the re-computation of every single step.
 
-Is there a way to update only the necessary steps?
+Is there a way to update only the necessary steps? The following example shows that we only need to compute the green part of the path instead of the old path.
+![old](/assets/img/d-star-old.png){:class="img-responsive"}
+![new](/assets/img/d-star-new.png){:class="img-responsive"}
+
+
+
 Here comes the D-Star-Light, the Dynamic version of A*. It works similar to A*, but computes only the necessary nodes to update the shortest path when environment is changed.
 
 Before we get started, let's picture what are necessary and unnecessary computational steps and how the computation "propagates"
@@ -66,47 +71,22 @@ min_{s' \in Succ(s)} (c(s, s') + g(s')) & \text{otherwise,}
 \end{cases}
 $$
 
-This two rules are the core of d-star-lite:
+The following two rules are the core of d-star-lite:
 
 In a node s:
   If rhs(s) equals g(s) ---> Update is complete, the cost of this node is ready and reliable.
   If rhs(s) not equls g(s)  ---> Update is needed, insert this node to the min-queue for the update.
 
+  $$
+  key(s) = [k_1(s), k_2(s)]\\
+  = [\min(g(s), rhs(s)) + h(s),\\
+  min(g(s), rhs(s)) ]\\
+  $$
 
 
 
 #Need pseudo code here
 
-
-
-
-
-**Meta:**
-D-Star-Light introduces two values: g(s) and rhs(s) to capture 2,
-f(n) = g(n) + h(n)
-rhs(s) = c(s, s') + g(s')
-
-
-
-$$
-f(s) = g(s) + h(s)
-$$
-
-
-$$
-g(s) = rhs(s)
-$$
-
-$$
-key(s) = [k_1(s), k_2(s)]\\
-= [\min(g(s), rhs(s)) + h(s),\\
-min(g(s), rhs(s)) ]\\
-$$
-
-
-
-
-Jekyll also offers powerful support for code snippets:
 
 ```
 main():
