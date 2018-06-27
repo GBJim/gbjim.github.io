@@ -108,20 +108,51 @@ $$
 
 Jekyll also offers powerful support for code snippets:
 
-{% highlight python %}
-INF = float("inf")
-def main():
-  for node in graph:
-    node.rhs = node.g = INF
-  start_node.rhs = 0
-  open_queue = []
-  while True:
-    compute_shortest_path(graph)
-    if is_environment_changed():
-      update_graph_cost()
+```
+main():
+  Initialize()
+  Forever:
+    ComputerShortestPath()
+      if change happens:
+        for all directed edges(u, v) with cost changed:
+          update the edge cost c(u, v)
+          UpdateVertex(u)
 
-{% endhighlight %}
+```
 
+```
+Initalize（）:
+  for all nodes s in graph:
+    g(s) = rhs(s) = INF
+  rhs(s_start) = 0
+  min_queue.insert(s_start)
+
+```
+
+```
+UpdateVertex(u):
+  rhs(u) = g(u') + c(u', u) where u' has the minimal rhs among predecessor of u
+  min_queue.remove(u) if u in min_queue
+  min_queue.insert(u) if g(u) != rhs(u)
+```
+
+```
+ComputerShortestPath():
+  While min_queue.min() < s_start or g(s_star) != rhs(s_start):
+    u = min_queue.pop()
+    if(g(u) > rhs(u)):
+      g(u) = rhs(u)
+      for all u' in successors of u"
+        UpdateVertex(u')
+    elif(g(u) < rhs(u)):
+      g(u) = inf
+      UpdateVertex(u')
+      for all u' in successors of u"
+        UpdateVertex(u')
+
+  min_queue.remove(u) if u in min_queue
+  min_queue.insert(u) if g(u) != rhs(u)
+```
 
 
 {% include disqus.html %}
