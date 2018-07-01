@@ -9,8 +9,8 @@ title:
   繁中: CHC-研究日誌
 email: ccha97u@gmail.com
 description:
-  en: Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-  繁中: 歡迎來到這裡
+  en: "Machine Learning and Autunomous Dirivng realted topics"
+  繁中: "以機器學習以及自動駕駛為主的相關主題的技術日誌"
 index:
   en: index.html
   繁中: index_tw.html
@@ -18,7 +18,7 @@ feed:
   en: /feed.xml
   繁中: /feed_tw.xml
 url: "" # the base hostname & protocol for your site
-twitter_username: GBJim
+linkedin_username: ccha97u
 github_username:  GBJim
 
 # Build settings
