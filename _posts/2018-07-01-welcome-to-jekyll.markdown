@@ -178,6 +178,3 @@ Let's visualize how D-Star-Lite propagate the computation:
 
 You can check my repo for better understanding:
 https://github.com/GBJim/d-star-lite
-
-
-{% include disqus.html %}
