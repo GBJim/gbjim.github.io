@@ -188,6 +188,3 @@ UpdateVertex(u):
 
 如果想知道實做的更多細節,你可以參考我的repo:
 https://github.com/GBJim/d-star-lite
-
-
-{% include disqus.html %}
