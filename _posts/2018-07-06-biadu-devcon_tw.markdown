@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2018百度開發者大會 -- 野心勃勃Apollo"
-date:   2018-07-06 00:59:29 +0800
+date:   2018-07-08 00:59:29 +0800
 categories: conference
 ref: baidu-devcon
 lang: 繁中
