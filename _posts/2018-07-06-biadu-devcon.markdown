@@ -25,79 +25,82 @@ After the CEO opening, each presentations got worse and even more. The contents 
 In the other hand, the organization of events are confusing. The traffic flow was badly managed and the some of the agenda were modified without any notifications. I would say this disappointing for a Chinese leading company like Baidu.  
 Nevertheless, I had learned lots of lessons from the conference. Let's get started.
 
-=================================Under Construction==================================
-### **四大開放大平台**
-會議重點圍繞這下面這四個開放給所有開發者的平台
+### **Four Opend Platforms**
+The cores of this conference are the following open platforms:  
 
 #### **DuerOS**
-就是一個語音交互系統, 百度希望開發者們一同開發各種功能, 並說服客戶裝上DuerOS  
-我不理解這有什麼商機潛力, 在車上裝個DuerOS或許可以為無法動手的司機提供便利的互動, 但是一隻手機完全可以作到這些功能, 更不用說放在家中的智慧音箱了, 相當多餘    
-另外語音交互僅是一種操作介面, 可以視為鍵盤或是滑鼠的替代, 系統能不能藉由你的輸入產生極度智慧的動作, 是另一碼子事  
-#### **百度大腦**
-一個具有200種功能的大雜燴平台, 你能想到的它都有  
-這種平台能夠處理被一些被良好定義的經典Machine Learning問題,  讓沒有ML相關知識的開發者解決簡單的問題, **簡單的問題並非沒有價值**  
-李彥宏當時在台上邀請了一位來自**西藏的醫師**, 這位醫師利用百度的平台訓練了一個**辨識水中寄生蟲**的模型, 高辨識精度的模型能夠取代寄生蟲專家的識別, 這在西藏這樣地廣人稀的地方極其珍貴  
-這讓我相當感動, 這位醫生用科技改善生活, 讓世界變得更好, 而不是那種多塞幾個鏡頭到手機上, 讓物質更加奢侈的努力
+It's simply an interactive voice system similar to Amazon Alexa and Google home. Baidu was convincing developers and customers to join the ecosystem of DuerOS.  
+What I do not see, is the business potential of this kind of systems. It might be convenient for a driver to query the system with his voice while his hands are busy at steering. But a smart phone can simply do this and does it even better. As for the smart speakers, I truely consider them as some redundant products you will buy and then forget.  
+It's worth mentioning that Voice Interaction is simplay an UI. The role of Voice Interaction is as same as a keyborad or a mouse. The intelligent behaviors of the machine depend on something more complicated than UI.  
+
+#### **Baidu Brain**
+A plaform with more than 200 Machine Learning features. It has every kind of tools you may think of.  
+Baidu Brain is suitable for those well-defined classifcal Machine Learning problems. A developer without ML knowledge can solve simple ML problem using Baidu Brain. **Simple problems can be extremely critical and invaluable**  
+During Robin Li's presentation, a Doctor from Tibet were invited to share his developing expereince. He built a predictive model that classifies parasites in water. The accurate model can replace the classification from professional parastie expert. In a vast place like Tibet, this invention saves peoples lives from the infection of parasites.  
+I were touched when during the doctor's presentation. He used the technology to make the world better. This is especially worthy in the era that smartest developers are desiging more annoying Adversisement and more luxury smart phones.  
 ![doctor](/assets/img/bc-doctor.jpg){:class="img-responsive"}
-*建立寄生蟲檢測模型的西藏醫師, 這個世界需要更多這樣的人*
+*The Tibet Docotr who built the parasite classifier, This world needs more people like him*
 <br />
 
-#### **百度小程序**
-簡單來說就是百度搞一個APP大平台, 所有功能都在百度APP之下實現, 有點類似微信小程序  
-一位講者提到了一個有趣的現象: **玻璃花園**, 描述網際網路的發展由當時的自由開放, 走向**被網路巨頭寡佔的割裂時代**, 網路巨頭提供的大平台能夠各式各樣的功能, 使用者只需要生活在這個平台之中即可, 如同一個巨大的玻璃花園, 騰訊的微信便是一個很好的例子  
-講者宣稱他們提出的小程序平台能夠打破玻璃花園的藩籬, 讓網路回到自由開放的田園時光,  這完全**狗屁不通**, 白痴都能看出來百度想自己搞個玻璃花園  
+#### **Baidu Mini Programs**
+In simple words, Baidu intends to build a huge APP platoform that has every service you need. The idea is similar to WeChat Mini Programs.  
+The speaker mentions an interesting phenomenon: **Greenhouse Garden**. It describes that Internet were free and open in the beginning, but was eventually monopolized by few enterprises. Those enterprises provides all the services you need in their plarforms, meaning the users can do everyhing within a platform. The internet becomes splitted and isolated.  
+The spekaer claimed that Biadu Mini Programs can breaks this isolation and returns the free and opened Internet. **This does not make any freaking sense.** Anyone can tell that Baidu want to build it's own Greenhouse Garden.
 ![lie](/assets/img/bc-lie.jpeg){:class="img-responsive"}
 <br />
 
 #### **Apollo**
-本次大會的主角, 與金龍客車量產的小巴士:**阿波龍**, 是最大的亮點, 另外還有農用車的擴展: **阿波牛**,  我會在下面的篇幅詳細介紹它們
+This is the highlight of the confernce. Baidu prsented Apollo-shufflebus, an cooperational production with King-Long Bus. In the other hand, some startups extended Apollo to robotics field. Apollo cleaning robot and Apollo spray truck are introduced in the conference as well.  
+In the following section, I will strees on the the development of Apollo.  
 <br />
 <br />
 
-### **園區小巴的量產-阿波龍**
+### **Production of Mini Shuttle Bus **
 ![bus](/assets/img/bc-bus.jpg){:class="img-responsive"}
-*金龍的無人小巴士和sensor設計圖*
+*The blue print of minibus and it's sensors*
 <br />
+The Baidu minibus can only cruise in closed areas such like Science Parks or Factories, meaning the autonomous level does not reach the urban-L4 we expected. Nevertheless, this production expereince are extremely important to Baidu.  
+Production is much more demanding than building a demo mahcine. Production requires an efficient and strict stndard to produce high quality products in low cost. The speaker gave two techinical examples of sensor calibrations in productions. The calibration bewteen camera and LiDAR; and the calibration between GPS and LiDAR.   
 
-在園區內行駛, 表明阿波龍的駕駛能力並沒有達到消費者所期待的都市級L4, 但這個**量產經驗**對百度來說仍然相當重要  
-量產是搞Demo是兩碼子事, 量產需要一個高效且嚴格的生產標準來達成高品質和低成本, 其中百度提到了兩個技術案例, 多傳感器的校正及GPS與傳感間的的校正  
-另外量產後的車輛也能不斷蒐集寶貴的數據, 讓百度能夠快速迭代下一代產品  
 <br />
 
 ![sesonr1](/assets/img/bc-sensor-cali1.jpg){:class="img-responsive"}
-*在金龍廈門工廠建造的標定空間, 利用牆壁上的上二維碼達到激光雷達與攝影機的校正*
+*The calibration room in Ximen factory. The QR codes on the wall are markers for correcting the difference between cameras and LiDARs*
 <br />
 
 ![sensor2](/assets/img/bc-sensor-cali.jpg){:class="img-responsive"}
-*激光雷達與GPS間的校正則利用繞八字的方式完成, 原理我尚未明白(掩面)*
+*Calibration between GPS and LiDAR is done by driving an 'eight' shape *
+<br />
+The generation of massive data from minibus is the benefits of prodoctuon as well. 
 <br />
 
 
+### **From Cars to Robots**
+Compare to car manufacturers, Internet compnay can extends the scope of Autonomous Driving in a more flexible way. There are two startups leverages Apollo to build robots.  
+The Cowa Robot from Shenzhen release their road cleaning robots to supply the huge demands of Chinese Cleaning Market.  
+Ther other company from Qingdao demonstrates their self-driving spray vehicle. An awesome example combining Agriculture and technology.
 
-### **從車輛到機器人-阿波牛**
-與造車廠保守的車本位思想不同, 互聯網企業能夠更靈活的**拓展自動駕駛的範疇**, 除了只載貨物的物流車之外,其中有兩家公司利用了Apollo框架搭建了機器人, 讓人眼睛一亮  
-深圳的酷哇機器人動起了清掃自動化的頭腦, 打算用機器人滿足中國龐大的清掃需求  
-另外青島的托爾泰克則搞了一台自動噴藥車, 名為阿波牛, 這種科技結合土地的案例太讓我興奮啦！
 ![cow](/assets/img/bc-cow.jpg){:class="img-responsive"}
-*在青島噴藥的阿波牛*
+*The spray vehicle is working in Qingdao*
 <br />
 
-### **商業模式的探索與代碼的演進**
-從17年7月, Apollo開源, 百度就有建立生態圈的想法了, 當時的1.0相當不完整, 許多模塊只有空殼框架, 缺少實現功能的代碼, 被評價為一場商業宣傳  
-而後版本更迭, 開始將低成本傳感器方案以及量產的概念融入代碼, 體現了百度在無人車商業化的探索, 從目標尚未明確的散彈槍式宣傳, 到後來目標明確的園區車量產    
-相信之後的商業模式變遷也會反應在Apollo這個項目上
+### **The codes evolve with Business Model**
+Since July 2017, Apollo was released, Baidu already had the idea to establish the self-driving ecosystem. In that moment, Apollo-1.0 only had defined the modules and interfaces without much implementations. Developers consider it as Buseiness Promotion rather than a pratical tool.  
+After a year, the solutions for low cost sensors and production concept were integrated into Apollo. This actually reflects Baidu's exploration in Business Model. In the beginning, Apollo serves as a business promotion without a clear target. Then, Baidu determines the clear goal of minibus production. All these business directions can be seen in the development of Apollo.  
+We will observe this refelction between code and business in future. 
 ![evolve](/assets/img/bc-evolve.png){:class="img-responsive"}
-*Apollo的演進與版本重點*
+*Evolution of Apollo*
 <br />
 <br />
-### **成為中國標準的野心**
-利用Apollo建立一個自駕同盟的計畫進展的相當順利, 百度這次除了拉到了比亞迪汽車一起站台外, 其他大大小小的車廠也有著不同規模的合作, 像是現代汽車搭載了語音互動的系統, 傳感器廠商提供Apollo的硬體支持等等    
-這次百度更進一步的提出了硬體整合平台, 讓硬體廠更有彈性的相容於Apollo, 甚至提出了百度認證車輛的概念, 想成為中國標準的野心一目了然  
-![number](/assets/img/bc-number.jpeg){:class="img-responsive"}
-*Apollo同盟的統計數據*
-<br />
-<br />
+### **The Ambition to become Chinese Standard**
+Baidu's plan to build a league of Apollo goes smoothly. A Chinese car company BYD declares to join Apollo on the conference. Besides, the other car companies also have cooperations with Baidu on different scales. For exmaple, Hyundai and KIA have vehicles with DuerOS installed. Some sensor companies provide the hardwares that support Apollo.  
+Baidu even proposed the ideas of Hardware Integration Platform and Apollo Vehicles Cerficiations. The ambition to become the Chinese standrd is clear.
 
-儘管百度沒有生產車輛的能耐, 但憑藉互聯網公司高速釋出產品和快速迭代的能力, 利用代碼開源打了一場閃電戰, 快速組織出了一個自駕同盟, 雖然如此還不能為百度帶來現金收益, 但已經為將來的發展打下了扎實的基礎
+![number](/assets/img/bc-number.jpeg){:class="img-responsive"}
+*The Statistics of the Apollo league*
+<br />
+<br />
+Even though Baidu does not have the ability to produce it's own vehicles. It has the fast development pace and quick iterations on products. With Apollo, Baidu had established a self-driving league in one year. Even this league does not return cash directly to the company. It lays the foundation for the long term future.
+
 ![for-all](/assets/img/bc-for-all.jpg){:class="img-responsive"}
-*百度的無人車野心*
+*The ambition of Baidu*
