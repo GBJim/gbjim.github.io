@@ -47,7 +47,6 @@ In simple words, Baidu intends to build a huge APP platform that has every servi
 The speaker mentions an interesting phenomenon: **Greenhouse Garden**. It describes that Internet were free and open in the beginning, but was eventually monopolized by few enterprises. Those enterprises provides all the services you need in their platforms, meaning the users can do everything within a platform. The Internet becomes split and isolated.  
 The speaker claimed that Biadu Mini Programs can breaks this isolation and returns the free and opened Internet. **This does not make any freaking sense.** Anyone can tell that Baidu want to build it's own Greenhouse Garden.  
 <br />
-
 ![lie](/assets/img/bc-lie.jpeg){:class="img-responsive"}
 <br />
 
