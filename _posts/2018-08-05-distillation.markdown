@@ -7,11 +7,32 @@ ref: distilling
 lang: en
 comments: true
 ---
-### **Prologue**
-This paper is written by the Deep Learning Pioneer, Geoffrey Hinton at Google. I would like to concluded the main idea as follows. **A strong Neural Network can teach a weak Neural Network that helps the weak model learns better**.
+### **Abstract**
+This paper is written by the Deep Learning Pioneer, Geoffrey Hinton at Google. I would like to concluded the main idea as follows. **A strong Neural Network can teach a weak Neural Network that helps the weak model learns better**. Please refer to the original publication: [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531) for complete understanding.
+
+### **Motivation: The Trade-off between Accuracy and Speed**
+Be accurate or be fast, there is always a trade-off. Considering a scenario, we have a weak model that inferences fast and a strong model that works slow.
+[image]
+
+If the speed is the hard requirement, we would just pick the weak model and do the training.
+[image]
+It seems like having a strong but slower model does not benefits in this scenario. But the model distillation gives a way to improve the weak model by using the strong model as a teacher.
+
+
+### **How Distillation Works?**
+
+
+### **Why Distillation Works?**
 
 
 <br />
+$$
+Softmax Functions.
+$$q_i = {exp(z_i) \over \sum_{j=1}^n exp(z_j)}$$
+$$
+
+
+
 $$
 Distilling Version of Softmax where $T$ is the tempture.
 $$q_i = {exp(z_i/T) \over \sum_{j=1}^n exp(z_j/T)}$$
