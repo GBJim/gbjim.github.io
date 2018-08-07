@@ -14,18 +14,24 @@ This paper is written by the Deep Learning Pioneer, Geoffrey Hinton at Google. I
 Be accurate or be fast, there is always a trade-off. Considering a scenario, we have a weak model that inferences fast and a strong model that works slow.
 [image]
 
-If the speed is the hard requirement, we would just pick the weak model and do the training.
+If the speed is the hard requirement, we can only pick the weak model and do the training.
 [image]
-It seems like having a strong but slower model does not benefits in this scenario. But the model distillation gives a way to improve the weak model by using the strong model as a teacher.
+It seems like having a strong but slower model does not benefits in this scenario. But the model distillation gives a way to improve the weak model by using the strong model as a teacher. Even in the case that not having a strong model, we can always build one by the clssical ensebmle methods.
 
 
 ### **How Distillation Works?**
-
+To distill a model, we firstly need to train a strong network as a techer for next stage.
+[image]
+In second stage, we take the probabilities predictions of the the strong model as the second groudn truth. The weak network then combines the original loss and the extra **soft targets** loss from the techer network. You may wonder how does the soft target loss contributes to the learining. Let's find out in next section. 
 
 ### **Why Distillation Works?**
+Imagine we are doing a image classification task with four classes: [Pedestrian, Dog, Car, truck].
+Given an image of a car and the trained teacher model, we may get a prediction result like this:
+[image][image]
 
-
-<br />
+As you can see, the model made the correct prediction on car, but still gives tiny probabilities on rest of the classes. These extra probabilities provide the **knowledge of generalization**. The relatively higher likelihood of the truck shows that cars are more similar to turcks than pedestrian or dogs. These 
+[image]
+In order to extract these knowledges, Hinton introduces **Softmax with tempture** to replace the regular softmax. It works like softmax with a hyperparameter *T*. 
 $$
 Softmax Functions.
 $$q_i = {exp(z_i) \over \sum_{j=1}^n exp(z_j)}$$
@@ -37,6 +43,19 @@ $$
 Distilling Version of Softmax where $T$ is the tempture.
 $$q_i = {exp(z_i/T) \over \sum_{j=1}^n exp(z_j/T)}$$
 $$
+
+Higher temperture mitigates the difference among classes thus enlarge the hidden knowledge of generalization. 
+[image]
+
+### **Extra Readings**
+Since the publication of Model Distillation, tons of related works have been done. Distilation had become an important concept escecially in the fild of Neural Network Compression. 
+Please refer to 
+[Awesome Distillation](https://github.com/dkozlov/awesome-knowledge-distillation)
+[A great implement of Model Distillation by](https://github.com/DushyantaDhyani/kdtf)
+
+
+<br />
+
 
 ### **Main Idea**
 A great beginning that goes down.
