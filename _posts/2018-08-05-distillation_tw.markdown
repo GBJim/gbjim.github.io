@@ -98,7 +98,7 @@ $$
 
 當*T*提高的時候, classes之間的差異會被消弭, 增大我們要取得的泛化知識  
 
-![T](/assets/img/distill-softmax-T.png){:class="img-responsive"}
+![T](/assets/img/distill-softmax-T.png){:class="img-responsive"}  
 *當T=3時的機率分佈*
 <br />
 
