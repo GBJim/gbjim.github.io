@@ -6,6 +6,8 @@ categories: algorithm
 ref: distilling
 lang: 繁中
 comments: true
+header-img: "/assets/img/distill-2models.png"
+subtitle: "Model Distillation: 模型蒸餾, 讓Neural Network教導其他Neural Network"
 ---
 ### **概述**
 這篇論文是深度學習的先驅, Geoffrey Hinton在2015年寫的  

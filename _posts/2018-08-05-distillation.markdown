@@ -6,6 +6,8 @@ categories: algorithm
 ref: distilling
 lang: en
 comments: true
+header-img: "/assets/img/distill-2models.png"
+subtitle: "Model Distillation: Neural Network teaches another Neural Network"
 ---
 ### **Abstract**
 This paper is written by the Deep Learning Pioneer, Geoffrey Hinton at 2015. I would like to concluded the main idea as follows. **A strong Neural Network can teach a weak Neural Network that helps the weak model learns better**. Please refer to the original publication: [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531) for complete understanding.  
