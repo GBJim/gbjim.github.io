@@ -46,24 +46,34 @@ Weak Model則將原本的loss加上這個**soft targets loss**, 藉此模仿Teac
 ``` Python
 #The loss of Model Distillation
 loss =  classification_loss + soft_target_loss
-```
-下一步, 我們來理解Model Distillation背後的原理  
+```  
+<br />
 
-### **Model Distillation的原理**
+讀到這裡, 你可能會有疑問, 既然Techer Network也是由相同的Training Data訓練出來的, 那麼為什麼可以幫助訓練呢?  
+<br />
 假設我們要做Image Classification的任務, 總共有四個類別要預測: [Pedestrian, Dog, Car, Truck]  
-給定一張車子的照片和訓練好的Model, 我們可以得到以下的預測機率  
-
-
-| ![car](/assets/img/distill-car.jpg) | ![softmax](/assets/img/distill-softmax.png)|
-
-*Image Classification的例子
+給定一張車子的照片和訓練好的Teacher Model, 我們可以得到以下的預測機率  
+![car](/assets/img/distill-car.jpg)  
+*一張Car的訓練圖片*
 <br />
 
+| ![car](/assets/img/distill-gt.png) | ![softmax](/assets/img/distill-softmax.png)|
 
+*Ground Truth 與Techer Network的預測比較*  
 <br />
-如圖所示, 模型正確的推測出圖片中的車輛, 在Car的類別上有極高的機率, 但其他類別仍然有微小的機率  
+如圖所示, 模型正確的推測出圖片中的車輛, 在Car的類別上有極高的機率, 唯一和Ground Truth的差別就是**其他不正確類別仍然有微小的機率**  
+而這微小的差距正是Model Distillation的關鍵, 下一步, 我們來理解背後的原理  
+
+### **泛化的知識**
 這些額外的機率提供了**泛化的知識**, 從truck相對較高的機率來看, 我們可以得知Car與Truck更為相近, 和Pedestrian或是Dog則不相似  
 這正是Model Distillation要萃取的目標  
+
+
+
+<br />
+
+
+
 
 ![knowledge](/assets/img/distill-knowledge.png){:class="img-responsive"}
 *泛化的知識*

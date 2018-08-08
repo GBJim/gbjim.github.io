@@ -44,22 +44,26 @@ In second stage, we take the probabilities of predictions from the strong model 
 loss =  classification_loss + soft_target_loss
 ```
 
-You may wonder how does the soft target loss contributes to the learning. Let's find out in next section.  
+You may wonder how does the soft target loss contributes to the learning. Since the teacher network is also trained on the same training data, where does the extra information come from?  
+<br />
+Imagine we are doing a image classification task with four classes: [Pedestrian, Dog, Car, Truck].  
+Given an image of a car and a trained teacher model, we got a prediction result from the teacher model like this:  
 
-### **Why Distillation Works?**
-Imagine we are doing a image classification task with four classes: [Pedestrian, Dog, Car, Truck].
-Given an image of a car and a trained teacher model, we may get a prediction result like this:  
-
-| ![car](/assets/img/distill-car.jpg) | ![softmax](/assets/img/distill-softmax.png)|
-
-*Example of a predictive probabilities*
+![car](/assets/img/distill-car.jpg)  
+*A training data of Car*  
 <br />
 
+| ![car](/assets/img/distill-gt.png) | ![softmax](/assets/img/distill-softmax.png)|
 
+*Ground Truth vs Prediction from the teacher network*  
 <br />
-As you can see, the model made the correct prediction on car, but still gives tiny probabilities on rest of the classes. These extra probabilities provide the **knowledge of generalization** we need. The relatively higher likelihood of the truck shows that cars are more similar to trucks than to pedestrian or dogs. This extra information is the target we want to extract from Model Distillation.
+As you can see, the model made the correct prediction on car. Compare to the ground truth, the only difference is the **tiny probabilities on the rest of the incorrect classes**.  
+Surprisingly, this small difference is the key of Model Distillation. Let's find out in next section.  
+
+### **The Knowledge of Generalization**
+These extra probabilities provide the **knowledge of generalization** we need. The relatively higher likelihood of the truck shows that cars are more similar to trucks than to pedestrian or dogs. This extra information is the target we want to extract from Model Distillation.
 ![knowledge](/assets/img/distill-knowledge.png){:class="img-responsive"}
-*The knowledge of generalization*
+*The knowledge of generalization from teacher network*
 <br />
 
 In order to extract these knowledges, Hinton introduces **Softmax with temperature** to replace the regular softmax. It works like softmax with a hyperparameter *T*.  
