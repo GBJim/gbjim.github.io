@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "The Gray Zone between Law and Technology"
+date:   2018-08-27 00:00:29 +0800
+categories: opinion
+ref: law
+lang: en
+comments: true
+header-img: "/assets/img/law-try.jpg"
+subtitle: "Instead of strictly following the lay, we should take the risk and act beforehand."
+---
+
+The development of autonomous vehicle demands tons of data. Since I have been working on the data collecting project, I came to understand the strict regulations of China regarding data.  
+
+The restriction of **HD Map** is the most mentionable.  
+A HD Map contains the information of lanes, traffic lights, and bridges. The precision can be achieved to centimeters in high quality maps.  
+All these information are considered as **National Security** related. Except for the 14 organizations with special permission, The producing and sharing of HD maps are strongly prohibited.  
+
+![HD-map](/assets/img/law-here_map.jpg){:class="img-responsive"}
+*A HD Map of Here*
+<br />
+To clarify which data are legally to collect, we came to the legal department and authority for clarification.  
+This is the answer we got: "All sensory data that captures the information of roads and locations are prohibited by HD Maps restriction, which including everything: LiDAR, radar, cameras, and GPS. Even if the purpose was not for HD map, the collecting is violating the laws already."  
+<br />
+What a ridiculous answer. This answer is saying that simply hosting a camera vehicle recorder is violating the law already.  
+
+![data](/assets/img/law-data.jpg){:class="img-responsive"}
+*The visualization of Waymo's data*  
+<br />
+The is a gray zone, where legislation is far behind of technology. Data collecting is tricky to be defined under the current regulations.  
+In lawer's perspective, the statement should be interpreted in the most restricted way. In this way, risks are eliminated and company is safe.  
+But from the perspective of product, strictly following the rule is definitely a bad choice. Especially when we see our competitors are collecting data without troubles.   
+
+In a gray zone like this, we need some courages and wits to act.  
+Small companies just collect data freely. No body would notice anyway.  
+Huge enterprises choose to partner with organization with permit. Different partnerships have different solutions.  
+There is conservative solution requiring an inspector with license sitting in the data collecting vehicle.  
+There is also a smart solution applying fancy business transitions, thus the collecting can be done under partner's entity.  
+![try](/assets/img/law-try.jpg){:class="img-responsive"}
+<br />
+Such gary zones would be more common, since technology goes faster and wilder.  
+Mobile payment and car-hailing platforms are typical examples.  
+Following restrictions is not enough. We need to **understand the risks** and build a strategy to it.
+
+To build a strategy, I came up some random aspects that should be considered.
+1. How do my competitors handle it？
+2. Is the government able to catch me?
+3. How is my relationship to the authority?
+4. Hou mucu is the fibe when get caught?
+5. Would my act damages someone's benefit and creating enemies？ (Uber/DiDi)
+6. Would my act benefit everyone and justifies my acts？(Alipay/WeChat Pay)
+
+Nevertheless, to win the the challenge of restrictions, it takes wisdom and chances.  
+Good luck. And I don't want to see each other in the jail. ;)
